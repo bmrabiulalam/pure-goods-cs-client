@@ -1,20 +1,26 @@
 import React, { useEffect, useState } from 'react';
-import Event from '../Event/Event';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import Product from '../Product/Product';
 
 const Home = () => {
-    const [events, setEvents] = useState([]);
+    const [products, setProducts] = useState([]);
     useEffect(() => {
         fetch('http://localhost:5000/events')
         .then(res => res.json())
-        .then(data => setEvents(data));
+        .then(data => setProducts(data));
     }, [])
 
     return (
-        <div>
+        products.length > 0 ?
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', marginTop: '30px' }}>
             {
-                events.map(event => <Event event={event}></Event>)
+                products.map(product => <Product product={product}></Product>)
             }
-        </div>
+        </div> 
+        : 
+        <div style={{ display: 'flex', justifyContent: 'center', marginTop: '20%' }}>
+            <CircularProgress />
+        </div> 
     );
 };
 
