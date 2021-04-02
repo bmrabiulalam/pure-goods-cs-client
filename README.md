@@ -60,7 +60,7 @@ A list of commonly used resources that I find helpful are listed in the acknowle
 * Authentication with firebase
 * Firebase Hosting
 * Heroku backend hosting
-* MongoDB backend database
+* MongoDB backend database hosting
 * Admin Panel
 
 ### Built With
