@@ -17,8 +17,6 @@
     <a href="https://pure-goods.herokuapp.com/">Backend API</a>
     ·
     <a href="https://github.com/Porgramming-Hero-web-course/full-stack-client-bmrabiulalam/issues">Request Feature</a>
-    ·
-    <a href="https://github.com/Porgramming-Hero-web-course/full-stack-client-bmrabiulalam/issues">Request Feature</a>
   </p>
 </p>
 
