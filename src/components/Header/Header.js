@@ -84,7 +84,16 @@ export default function Header() {
 
     const handleLogout = () => {
         handleMenuClose();
-        setLoggedInUser({});
+        setLoggedInUser({
+            isSignedIn: false,
+            name: '',
+            email: '',
+            password: '',
+            photo: '',
+            message: '',
+            success: false,
+            signOut: true
+        });
     }
 
     const menuId = 'primary-search-account-menu';
@@ -99,7 +108,7 @@ export default function Header() {
             onClose={handleMenuClose}
         >
             <MenuItem onClick={handleMenuClose} style={{backgroundColor: 'lightgray'}}>
-                <p>{loggedInUser.name}</p>
+                <p>{loggedInUser?.name}</p>
             </MenuItem>
             <MenuItem onClick={handleLogout}>
                 <p>Logout</p>
@@ -146,7 +155,7 @@ export default function Header() {
                             : <AccountCircle />
                         }
                     </IconButton>
-                    <p>{loggedInUser.name}</p>
+                    <p>{loggedInUser?.name}</p>
                 </MenuItem>
                 : 
                 <MenuItem onClick={() => handleClick('/login')}>
@@ -158,7 +167,7 @@ export default function Header() {
 
     return (
         <div className={classes.grow}>
-            <AppBar position="static" style={{ background: 'transparent'}}>
+            <AppBar position="static" style={{ background: 'transparent', boxShadow: 'none'}}>
                 <Toolbar>
                     <Typography className={classes.title} variant="h4" noWrap>
                         Pure Goods
@@ -200,7 +209,7 @@ export default function Header() {
                             aria-controls={mobileMenuId}
                             aria-haspopup="true"
                             onClick={handleMobileMenuOpen}
-                            color="#333"
+                            style={{color: "#333"}}
                         >
                             <MoreIcon />
                         </IconButton>

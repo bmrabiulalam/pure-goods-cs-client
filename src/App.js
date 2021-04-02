@@ -15,44 +15,49 @@ import CheckOut from './components/CheckOut/CheckOut';
 import Admin from './components/Admin/Admin';
 
 export const UserContext = createContext();
-export const CheckOutContext = createContext();
+export const CheckOutProductContext = createContext();
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
-  const [checkOut, setCheckOut] = useState({});
+  const [checkOutProduct, setCheckOutProduct] = useState({});
 
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
-    <CheckOutContext.Provider value={[checkOut, setCheckOut]}>
-      <div className="App">
-        <Router>
-          <Header />
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/home">
-              <Home />
-            </Route>
-            <PrivateRoute path="/orders">
-              <Orders />
-            </PrivateRoute>
-            <PrivateRoute path="/checkout">
-              <CheckOut />
-            </PrivateRoute>
-            <PrivateRoute path="/admin">
-              <Admin />
-            </PrivateRoute>
-            <Route path="/login">
-              <Login />
-            </Route>
-            <Route path="*">
-              <NotFound />
-            </Route>
-          </Switch>
-        </Router>
-      </div>
-    </CheckOutContext.Provider>
+      <CheckOutProductContext.Provider value={[checkOutProduct, setCheckOutProduct]}>
+        <div className="App">
+          <Router>
+            <Switch>
+              <Route exact path="/">
+                <Header />
+                <Home />
+              </Route>
+              <Route path="/home">
+                <Header />
+                <Home />
+              </Route>
+              <PrivateRoute path="/orders">
+                <Header />
+                <Orders />
+              </PrivateRoute>
+              <PrivateRoute path="/checkout">
+                <Header />
+                <CheckOut />
+              </PrivateRoute>
+              <PrivateRoute path="/admin">
+                <Admin />
+              </PrivateRoute>
+              <Route path="/login">
+                <Header />
+                <Login />
+              </Route>
+              <Route path="*">
+                <Header />
+                <NotFound />
+              </Route>
+            </Switch>
+          </Router>
+        </div>
+      </CheckOutProductContext.Provider>
     </UserContext.Provider>
   );
 }

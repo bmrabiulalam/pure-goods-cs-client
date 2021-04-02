@@ -49,7 +49,7 @@ const StyledCardMedia = withStyles({
 })(CardMedia);
 
 const NotFound = (props) => {
-    document.title = '404! Page Not Found!';
+    document.title = 'Error: 404! Page Not Found.';
     const classes = useStyles();
 
     return (

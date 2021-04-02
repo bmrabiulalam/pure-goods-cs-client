@@ -16,6 +16,7 @@ const btnStyle = {
 }
 
 const Login = () => {
+    document.title = 'Login';
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
     const [, setUser] = useState({
         isSignedIn: false,
@@ -24,7 +25,8 @@ const Login = () => {
         password: '',
         photo: '',
         message: '',
-        success: false
+        success: false,
+        signOut: false
     });
     const history = useHistory();
     const location = useLocation();
@@ -54,7 +56,8 @@ const Login = () => {
     }
 
     
-    loggedInUser && if(Object.keys(loggedInUser).length === 0){
+    if(loggedInUser.signOut){
+        // console.log('sign out')
         signOut();
     }
 

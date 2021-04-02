@@ -7,17 +7,17 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import { CheckOutContext } from '../../App';
+import { CheckOutProductContext } from '../../App';
 import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import Box from '@material-ui/core/Box';
 
 const useStyles = makeStyles({
     root: {
-        maxWidth: 280,
+        maxWidth: 220,
         backgroundColor: 'white',
         borderRadius: 8,
         marginBlock: '1%',
-        boxShadow: '0 3px 5px 2px rgba(0, 0, 0, .2)',
+        boxShadow: '0 2px 2px 2px rgba(0, 0, 0, .2)',
     },
 });
 
@@ -40,7 +40,7 @@ const StyledCardMedia = withStyles({
     /* Styles applied to the root element. */
     root: {
         backgroundSize: 'contain',
-        marginTop: '10px',
+        marginTop: '7px',
     },
     /* Styles applied to the root element if `component="picture or img"`. */
     img: {
@@ -51,13 +51,13 @@ const StyledCardMedia = withStyles({
 
 const Product = (props) => {
     const classes = useStyles();
-    const [, setCheckOut] = useContext(CheckOutContext);
+    const [, setCheckOutProduct] = useContext(CheckOutProductContext);
     const history = useHistory();
-    const { name, image } = props.product;
+    const { name, weight, price, image } = props.product;
 
     const handleBuy = () => {
         console.log(props.product)
-        setCheckOut(props.product);
+        setCheckOutProduct(props.product);
         history.push('/checkout');
     }
     
@@ -67,20 +67,20 @@ const Product = (props) => {
                 <StyledCardMedia
                     component="img"
                     alt={name}
-                    height="300"
+                    height="150"
                     image={image}
                     title={name}
                 />
                 <CardContent>
-                    <Typography gutterBottom variant="h5" component="h2">
-                        {name}
+                    <Typography gutterBottom variant="h6" component="h2">
+                        {name + ' - ' + weight}
                     </Typography>
                 </CardContent>
             </CardActionArea>
-            <CardActions style={{display: 'flex', justifyContent: 'between'}}>
-                {/* <Typography gutterBottom variant="h5" component="h2">
+            <CardActions style={{display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end'}}>
+                <Typography gutterBottom variant="h5" component="h2">
                     ${price}
-                </Typography> */}
+                </Typography>
                 <StyledButton onClick={handleBuy}><ShoppingCartIcon /> Buy Now</StyledButton>
             </CardActions>
         </Box>
