@@ -23,7 +23,6 @@ const useStyles = makeStyles({
   });
 
 const EditProduct = () => {
-    document.title = 'Manage Products';
     const classes = useStyles();
     const [products, setProducts] = useState([]);
 
@@ -90,7 +89,7 @@ const EditProduct = () => {
             </Grid>
         </div>
         : 
-        <div style={{ display: 'flex', justifyContent: 'center', paddingBlock: '10%' }}>
+        <div style={{ display: 'flex', justifyContent: 'center', paddingBlock: '25%' }}>
             <CircularProgress />
         </div> 
     );

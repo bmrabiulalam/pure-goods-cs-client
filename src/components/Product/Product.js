@@ -51,13 +51,14 @@ const StyledCardMedia = withStyles({
 
 const Product = (props) => {
     const classes = useStyles();
-    const [, setCheckOutProduct] = useContext(CheckOutProductContext);
+    const [checkOutProduct, setCheckOutProduct] = useContext(CheckOutProductContext);
     const history = useHistory();
     const { name, weight, price, image } = props.product;
 
     const handleBuy = () => {
-        console.log(props.product)
-        setCheckOutProduct(props.product);
+        const checkOutNewProduct = [...checkOutProduct];
+        checkOutNewProduct.push(props.product)
+        setCheckOutProduct(checkOutNewProduct);
         history.push('/checkout');
     }
     

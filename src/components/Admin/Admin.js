@@ -41,7 +41,7 @@ const Admin = () => {
     }
 
     return (
-        <Grid container style={{paddingTop: '3%'}}>
+        <Grid container>
             <Grid item xs={3} style={{color: '#fff', backgroundColor: '#6a8775', padding: '2%'}}>
                 <Typography align="left" style={{fontWeight: 600, marginBottom: '10%'}} variant="h4" noWrap>
                     Pure Goods

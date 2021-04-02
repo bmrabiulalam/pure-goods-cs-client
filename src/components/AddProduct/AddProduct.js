@@ -24,7 +24,6 @@ const StyledButton = withStyles({
 })(Button);
 
 const AddProduct = () => {
-    document.title = 'Add Product';
     const [product, setProduct] = useState({
         name: '',
         price: 0,

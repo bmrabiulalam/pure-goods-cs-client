@@ -19,39 +19,34 @@ export const CheckOutProductContext = createContext();
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
-  const [checkOutProduct, setCheckOutProduct] = useState({});
+  const [checkOutProduct, setCheckOutProduct] = useState([]);
 
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>
       <CheckOutProductContext.Provider value={[checkOutProduct, setCheckOutProduct]}>
         <div className="App">
           <Router>
+                <Header />
             <Switch>
               <Route exact path="/">
-                <Header />
                 <Home />
               </Route>
               <Route path="/home">
-                <Header />
                 <Home />
               </Route>
               <PrivateRoute path="/orders">
-                <Header />
                 <Orders />
               </PrivateRoute>
               <PrivateRoute path="/checkout">
-                <Header />
                 <CheckOut />
               </PrivateRoute>
               <PrivateRoute path="/admin">
                 <Admin />
               </PrivateRoute>
               <Route path="/login">
-                <Header />
                 <Login />
               </Route>
               <Route path="*">
-                <Header />
                 <NotFound />
               </Route>
             </Switch>

@@ -43,7 +43,8 @@ const CheckOut = () => {
     const {name, weight, price} = checkOutProduct;
 
     const checkout = () => {
-        const orderDetails = {...loggedInUser, products: checkOutProduct, orderTime: new Date()};
+        const {name, email} = loggedInUser;
+        const orderDetails = {name, email, products: checkOutProduct, orderTime: new Date()};
 
         fetch('https://pure-goods.herokuapp.com/checkout', {
             method: 'POST',
