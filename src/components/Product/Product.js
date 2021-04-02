@@ -51,19 +51,17 @@ const StyledCardMedia = withStyles({
 
 const Product = (props) => {
     const classes = useStyles();
-    const [checkOutProduct, setCheckOutProduct] = useContext(CheckOutProductContext);
+    const [, setCheckOutProduct] = useContext(CheckOutProductContext);
     const history = useHistory();
     const { name, weight, price, image } = props.product;
 
     const handleBuy = () => {
-        const checkOutNewProduct = [...checkOutProduct];
-        checkOutNewProduct.push(props.product)
-        setCheckOutProduct(checkOutNewProduct);
+        setCheckOutProduct(props.product);
         history.push('/checkout');
     }
     
     return (
-        <Box mx="auto" p={1} className={classes.root}>
+        <Box mx="auto" p={1} className={classes.root} style={{paddingInline: '2%'}}>
             <CardActionArea>
                 <StyledCardMedia
                     component="img"

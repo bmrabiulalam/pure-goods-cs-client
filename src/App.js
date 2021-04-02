@@ -19,7 +19,7 @@ export const CheckOutProductContext = createContext();
 
 function App() {
   const [loggedInUser, setLoggedInUser] = useState({});
-  const [checkOutProduct, setCheckOutProduct] = useState([]);
+  const [checkOutProduct, setCheckOutProduct] = useState({});
 
   return (
     <UserContext.Provider value={[loggedInUser, setLoggedInUser]}>

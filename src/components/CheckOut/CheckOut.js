@@ -40,7 +40,8 @@ const CheckOut = () => {
     const classes = useStyles();
     const [checkOutProduct, ] = useContext(CheckOutProductContext);
     const [loggedInUser, ] = useContext(UserContext);
-    const {name, weight, price} = checkOutProduct;
+    // const {name, weight, price} = checkOutProduct;
+    console.log(checkOutProduct)
 
     const checkout = () => {
         const {name, email} = loggedInUser;
@@ -59,7 +60,7 @@ const CheckOut = () => {
   
     return (
         <div style={{display: 'flex', justifyContent: 'center', marginTop: '3%'}}>
-            <Grid container spacing={1} className={classes.grid}>
+            <Grid container spacing={1} className={classes.grid} style={{paddingInline: '2%'}}>
                 <Grid item xs={12} align="left">
                     <h2>CheckOut</h2>
                 </Grid>
@@ -74,10 +75,10 @@ const CheckOut = () => {
                             </TableRow>
                         </TableHead>
                         <TableBody>
-                            <TableRow key={name}>
-                                <TableCell>{name} - {weight}</TableCell>
+                            <TableRow key={checkOutProduct?.name}>
+                                <TableCell>{checkOutProduct?.name} - {checkOutProduct?.weight}</TableCell>
                                 <TableCell align="center">{1}</TableCell>
-                                <TableCell align="right">${price}</TableCell>
+                                <TableCell align="right">${checkOutProduct?.price}</TableCell>
                             </TableRow>
                         </TableBody>
                     </Table>

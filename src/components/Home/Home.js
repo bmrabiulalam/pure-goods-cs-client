@@ -13,7 +13,7 @@ const Home = () => {
 
     return (
         products.length > 0 ?
-        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', marginTop: '30px' }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', marginTop: '30px', paddingInline: '2%'}}>
             {
                 products.map(product => <Product key={product._id} product={product}></Product>)
             }

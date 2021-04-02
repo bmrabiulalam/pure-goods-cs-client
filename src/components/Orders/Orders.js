@@ -75,7 +75,7 @@ const Orders = () => {
 
     return (
         <div style={{ display: 'flex', justifyContent: 'center', marginTop: '3%' }}>
-            <Grid container spacing={1} className={classes.grid}>
+            <Grid container spacing={1} className={classes.grid} style={{paddingInline: '2%'}}>
                 <Grid item xs={12} align="left">
                     <h2>Purchase Order History</h2>
                 </Grid>

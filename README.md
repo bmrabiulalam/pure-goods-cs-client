@@ -1,20 +1,24 @@
 <p align="center">
-  <a href="https://github.com/bmrabiulalam/easy-ride">
+  <a href="https://github.com/Porgramming-Hero-web-course/full-stack-client-bmrabiulalam">
   </a>
 
-  <h3 align="center">EASY RIDE</h3>
+  <h3 align="center">PURE GOODS</h3>
 
   <p align="center">
-    An awesome site to find all the available rides on different vehicles in urban area.
+    An awesome site to find all the pure consumer products.
     <br />
-    <a href="https://github.com/bmrabiulalam/easy-ride"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Porgramming-Hero-web-course/full-stack-client-bmrabiulalam"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://easy-ride-n.netlify.app/">View Demo</a>
+    <a href="https://pure-goods.web.app/">View Pure Goods Demo</a>
     ·
-    <a href="https://github.com/bmrabiulalam/easy-ride/issues">Report Bug</a>
+    <a href="https://github.com/Porgramming-Hero-web-course/full-stack-server-bmrabiulalam">Back End Repo</a>
+    .
+    <a href="https://pure-goods.herokuapp.com/">Backend API</a>
     ·
-    <a href="https://github.com/bmrabiulalam/easy-ride/issues">Request Feature</a>
+    <a href="https://github.com/Porgramming-Hero-web-course/full-stack-client-bmrabiulalam/issues">Request Feature</a>
+    ·
+    <a href="https://github.com/Porgramming-Hero-web-course/full-stack-client-bmrabiulalam/issues">Request Feature</a>
   </p>
 </p>
 
@@ -54,9 +58,12 @@ There are many great codes available on GitHub, however, I tried to give it a sh
 A list of commonly used resources that I find helpful are listed in the acknowledgements.
 
 # Features
-* Find all rides in your town
+* Find all the pure groceries and consumer products
 * Authentication with firebase
-* Maps Location
+* Firebase Hosting
+* Heroku backend hosting
+* MongoDB backend database
+* Admin Panel
 
 ### Built With
 
@@ -66,7 +73,10 @@ A list of commonly used resources that I find helpful are listed in the acknowle
 * [React JS](https://reactjs.org/)
 * [React Router](https://reactrouter.com/)
 * [Material UI](https://material-ui.com/)
-* [Firebase Authentication](https://firebase.com/)
+* [Firebase Authentication & Frontend Hosting](https://firebase.com/)
+* [Heroku Server Backend Hosting](https://heroku.com/)
+* [Mongodb Database Hosting](https://mongodb.com/)
+* [Imgbb Image Hosting](https://www.imgbb.com/)
   
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -84,11 +94,11 @@ To get a local copy up and running follow these simple example steps.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/bmrabiulalam/easy-ride.git
+   git clone https://github.com/Porgramming-Hero-web-course/full-stack-client-bmrabiulalam.git
    ```
 2. Go to the project folder
    ```sh
-   cd react-auth-bmrabiulalam
+   cd full-stack-client-bmrabiulalam
    ```
 2. Install NPM packages
    ```sh
@@ -100,7 +110,7 @@ To get a local copy up and running follow these simple example steps.
 
 1. Go to the project directory
    ```sh
-   cd react-auth-bmrabiulalam
+   cd full-stack-client-bmrabiulalam
    ```
 2. Run the App
    ```sh
@@ -110,7 +120,7 @@ To get a local copy up and running follow these simple example steps.
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/bmrabiulalam/easy-ride/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/Porgramming-Hero-web-course/full-stack-client-bmrabiulalam/issues) for a list of proposed features (and known issues).
 
 
 <!-- CONTRIBUTING -->
@@ -130,7 +140,7 @@ Contributions are what make the open source community such an amazing place to b
 
 Muhammad Rabiul Alam - [@bm_rabiulalam](https://twitter.com/bm_rabiulalam) - bmrabiulalam@gmail.com
 
-Project Link: [https://github.com/bmrabiulalam/easy-ride](https://github.com/bmrabiulalam/easy-ride)
+Project Link: [https://github.com/Porgramming-Hero-web-course/full-stack-client-bmrabiulalam](https://github.com/Porgramming-Hero-web-course/full-stack-client-bmrabiulalam)
 
 
 <!-- ACKNOWLEDGEMENTS -->
@@ -139,11 +149,9 @@ Project Link: [https://github.com/bmrabiulalam/easy-ride](https://github.com/bmr
 * [React JS](https://reactjs.org/)
 * [React Router](https://reactrouter.com/)
 * [Material UI](https://material-ui.com/)
-* [Firebase Authentication](https://firebase.com/)
-* [Google Maps API](https://console.cloud.google.com/google/maps-apis)
-* [Google Maps Console](console.cloud.google.com/projectselector2/apis/dashboard)
-* [React Google Maps API](https://react-google-maps-api-docs.netlify.app/)
+* [Firebase Authentication & Hosting](https://firebase.com/)
+* [Heroku Server Backend Hosting](https://heroku.com/)
+* [Mongodb Database Hosting](https://mongodb.com/)
 * [SVG Images & Icons](https://www.svgrepo.com/)
-* [Free Background Image](https://www.vecteezy.com/free-vector/car-road)
-* [Netlify](https://www.netlify.com/)
+* [Imgbb Image Hosting](https://www.imgbb.com/)
 * [VS Code](https://code.visualstudio.com/)
